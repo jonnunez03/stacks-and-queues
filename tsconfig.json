@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",         // Target modern JavaScript
+    "module": "CommonJS",       // Use CommonJS module system
+    "moduleResolution": "Node", // Node-style module resolution
+    "outDir": "./dist",         // Compiled output folder (if needed)
+    "esModuleInterop": true,    // Enable compatibility with CommonJS
+    "skipLibCheck": true,       // Skip type-checking of declaration files
+    "strict": true              // Enable strict type-checking
+  },
+  "include": ["*.ts"],         // Include all .ts files in the root directory
+  "exclude": ["node_modules"]  // Exclude node_modules folder
+}

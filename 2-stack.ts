@@ -2,7 +2,34 @@
 // - Define a class named Stack.
 // - Look into the private keyword. Make sure we can initialize a stack of any input type.
 // - Initialize the stack in the constructor. Remember, we may need to utilize other data structures here to create the behavior we are looking for.
+export class Stack<T> {
+  private items: T[] = [];
 
+  push(item: T): void {
+    this.items.push(item);
+  }
+  pop(): T | null {
+    if(this.isEmpty()) {
+      return null;
+    } 
+    return this.items.pop()!;
+  }
+  peek(): T | null {
+    if(this.isEmpty()) {
+      return null;
+    }
+     return this.items[this.items.length - 1];
+  }
+  isEmpty(): boolean {
+    return this.items.length === 0;
+  }
+  size(): number {
+    return this.items.length
+  }
+  print(): void {
+    console.log(this.items.join(' | '));
+  }
+}
 // Step 2: Implement push method
 // - Create a method to add an element to the stack.
 // - Add the element to the end of the array (top of the stack).
@@ -34,3 +61,4 @@
 // console.log(stack.peek()); // 20
 // console.log(stack.size()); // 2
 // console.log(stack.isEmpty()); // false
+
